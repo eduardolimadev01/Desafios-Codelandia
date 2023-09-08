@@ -1,11 +1,15 @@
 import "./style.sass"
 
 export default function Desafio01() {
-    return <section className="container">
+    return <section
+        className="container"
+    >
         <header className="header">
             foobar
         </header>
-        <main></main>
+        <main>
+
+        </main>
     </section>
 }
 
