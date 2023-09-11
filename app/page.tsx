@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link"
 
 import desafios from "./desafios"
@@ -45,12 +46,12 @@ export default function Home() {
                                 className="w-full"
                                 key={desafio.path}
                             >
-                                <Link href={desafio.path}>
+                                <Link href={"/" + desafio.path}>
                                     <section
                                         className={style.main.challenges.card.container}
                                     >
                                         <img
-                                            src={desafio.img}
+                                            src={`${process.env.NEXT_PUBLIC_NODE_ENV != "" ? "/" : "/Desafios-Codelandia/"}desafios/${desafio.path}.webp`}
                                             alt={desafio.title}
                                             className={style.main.challenges.card.img}
                                         />
